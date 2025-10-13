@@ -1,0 +1,21 @@
+version: "3.1"
+
+stories:
+- story: happy path local quote
+  steps:
+    - intent: greet
+    - action: utter_greet
+    - intent: ask_quote
+    - action: action_get_local_quote
+
+- story: add and show last
+  steps:
+    - intent: add_quote
+    - action: action_add_quote
+    - intent: show_last_quote
+    - action: action_show_last_quote
+
+- story: fetch online quote
+  steps:
+    - intent: fetch_quote_api
+    - action: action_fetch_quote_api
