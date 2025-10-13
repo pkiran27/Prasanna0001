@@ -1,0 +1,30 @@
+==== How to Run (Evaluator Guide) ====
+
+1) Environment setup
+- Requirements: Python 3.8–3.11, internet optional
+- In a terminal:
+  cd assistant_simple
+  ./setup.sh
+  source .venv/bin/activate
+
+2) Train the model
+  rasa train
+
+3) Start action server (Terminal A)
+  rasa run actions --port 5055 --cors "*"
+
+4) Start assistant shell (Terminal B)
+  rasa shell --debug
+
+5) Demo script (type in shell)
+  hi
+  give me a quote
+  add quote: "Be curious. Not judgmental."
+  show last quote
+  fetch an online quote
+  bye
+
+Notes
+- External API fetch gracefully falls back to local quotes when offline.
+- No secrets required; all components are Rasa Open Source.
+- See README.md for details and troubleshooting.

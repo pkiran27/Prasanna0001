@@ -1,0 +1,22 @@
+version: "3.1"
+
+rules:
+- rule: greet rule
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- rule: help rule
+  steps:
+    - intent: ask_help
+    - action: utter_help
+
+- rule: goodbye rule
+  steps:
+    - intent: goodbye
+    - action: utter_goodbye
+
+- rule: show last quote rule
+  steps:
+    - intent: show_last_quote
+    - action: action_show_last_quote

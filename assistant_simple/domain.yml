@@ -1,0 +1,37 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - ask_quote
+  - add_quote
+  - show_last_quote
+  - fetch_quote_api
+  - ask_help
+
+slots:
+  last_quote:
+    type: text
+    influence_conversation: false
+    mappings:
+      - type: custom
+
+responses:
+  utter_greet:
+    - text: "Hi! I can share quotes, remember the last one, and even save yours. Try: 'give me a quote', 'add quote: "Your text"', or 'show last quote'."
+  utter_goodbye:
+    - text: "Goodbye! Talk soon."
+  utter_help:
+    - text: "I understand: greet, goodbye, ask for a quote, fetch an online quote, add a quote you provide, and show the last quote I told you."
+  utter_ack_add:
+    - text: "Saved your quote. You can say 'show last quote' to hear it again."
+
+actions:
+  - action_get_local_quote
+  - action_add_quote
+  - action_show_last_quote
+  - action_fetch_quote_api
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,56 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - good morning
+    - good evening
+    - yo
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - talk later
+    - catch you later
+
+- intent: ask_help
+  examples: |
+    - help
+    - what can you do
+    - how can you help me
+    - commands
+    - show help
+
+- intent: ask_quote
+  examples: |
+    - give me a quote
+    - tell me a quote
+    - quote please
+    - share a quote
+
+- intent: fetch_quote_api
+  examples: |
+    - fetch an online quote
+    - get a quote from the internet
+    - online quote please
+    - get quote from api
+
+- intent: add_quote
+  examples: |
+    - add quote: "Be yourself; everyone else is already taken."
+    - add a quote: "{quote}"
+    - save this quote: "{quote}"
+    - remember this quote: "{quote}"
+    - store quote "{quote}"
+
+- intent: show_last_quote
+  examples: |
+    - show last quote
+    - what was the last quote
+    - repeat the last quote
+    - show my last quote
